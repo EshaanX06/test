@@ -3,53 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #ffe6e6;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        .cartoon {
-            width: 200px;
-            height: auto;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        .button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin: 10px;
-            cursor: pointer;
-        }
-        #noButton {
-            position: absolute;
-        }
-    </style>
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Will you be my Valentine?</h1>
-        <img src="https://example.com/cute-cartoon.png" alt="Cute Cartoon" class="cartoon">
         <div class="buttons">
-            <button class="button" id="yesButton">Yes</button>
-            <button class="button" id="noButton">No</button>
+            <button class="yes-button" onclick="handleYesClick()">Yes</button>
+            <button class="no-button" onclick="handleNoClick()">No</button>
+        </div>
+        <div class="gif_container">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
         </div>
     </div>
-
-    <script>
-        const noButton = document.getElementById('noButton');
-
-        noButton.addEventListener('mouseover', () => {
-            const x = Math.floor(Math.random() * (window.innerWidth - noButton.clientWidth));
-            const y = Math.floor(Math.random() * (window.innerHeight - noButton.clientHeight));
-            noButton.style.left = `${x}px`;
-            noButton.style.top = `${y}px`;
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
